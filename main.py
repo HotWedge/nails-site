@@ -1,4 +1,5 @@
-from app import app
+from fastapi import FastAPI
+from routes import router
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+app = FastAPI()
+app.include_router(router)
